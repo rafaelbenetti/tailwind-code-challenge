@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    localStorage.setItem('access_token', 'kIKopioKis');
-    this.router.navigate(['/cards']);
+    sessionStorage.setItem('access_token', 'kIKopioKis');
+    this.router.navigate(['/home']);
   }
 }

@@ -1,1 +1,4 @@
-<p>top-cards works!</p>
+<p class="font-bold my-1.5">Top Cards</p>
+<div class="columns-2 md:columns-4">
+  <app-card *ngFor="let card of cards" [card]="card"></app-card>
+</div>

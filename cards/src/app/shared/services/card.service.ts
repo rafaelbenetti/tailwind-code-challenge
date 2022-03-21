@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom, Observable } from 'rxjs';
+import { Card } from 'src/app/secure/top-cards/card/card.model';
 
-import { Card } from 'src/app/secure/top-cards/card.model'
 
 @Injectable({
   providedIn: 'root'

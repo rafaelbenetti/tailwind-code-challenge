@@ -1,0 +1,34 @@
+@import "../../../../scss/variables";
+
+.navbar-container {
+  padding: 1rem 0;
+  background-color: $primary-color;  
+  text-align: center;
+
+  .navbar {
+    text-align: left;
+
+    .navbar-item {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      outline: none;
+      padding: 0 .5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .navbar-container .navbar {
+    display: inline-block;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-container .navbar {
+    display: inline-block;
+    width: 60%;
+  }
+}
+

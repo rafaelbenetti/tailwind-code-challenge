@@ -4,5 +4,6 @@ export interface Card {
   name: string;
   description: string;
   itemCount: number;
-  createdDate:number;    
+  createdDate: Date;    
+  updatedDate: Date;
 }

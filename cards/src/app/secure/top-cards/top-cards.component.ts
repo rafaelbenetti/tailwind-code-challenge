@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CardService } from 'src/app/shared/services/card.service';
+import { getRandomDate } from 'src/app/shared/utils/date.utils';
+import { Card } from './card/card.model';
 
 @Component({
   selector: 'app-top-cards',
@@ -9,20 +10,21 @@ import { CardService } from 'src/app/shared/services/card.service';
 })
 export class TopCardsComponent implements AfterViewInit {
 
+  @Input() cards: Card[];
   subscription?: Subscription;
 
-  constructor(private cardService: CardService) { }
-
+  constructor() { }
+  
   ngAfterViewInit(): void {
-    this.subscription = this.cardService.get()
-      .subscribe(cards => {
-        console.log(cards);
-      });
-  }
+    this.cards?.sort((a,b) => b.createdDate?.getTime() - a.createdDate?.getTime());
 
-  ngOnDestroy(): void {
-    if (this.subscription && !this.subscription.closed) {
-      this.subscription.unsubscribe();
-    }
+    const mappedCards = this.cards?.map(card => {
+      return {
+        ...card,
+        updatedDate: getRandomDate()
+      }
+    });
+
+    console.log('MAPPED CARDS:', mappedCards);
   }
 }

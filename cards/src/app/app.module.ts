@@ -7,12 +7,16 @@ import { AuthGuard } from './shared/guards/auth-guard';
 import { PublicComponent } from './layouts/public/public.component';
 import { SecureComponent } from './layouts/secure/secure.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './layouts/secure/header/header.component';
+import { FooterComponent } from './layouts/secure/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PublicComponent,
-    SecureComponent
+    SecureComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
