@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SecureRoutingModule } from './secure-routing.module';
 import { TopCardsComponent } from './top-cards/top-cards.component';
+import { CardService } from '../shared/services/card.service';
 
 
 @NgModule({
@@ -12,6 +13,9 @@ import { TopCardsComponent } from './top-cards/top-cards.component';
   imports: [
     CommonModule,
     SecureRoutingModule
+  ],
+  providers: [
+    CardService
   ]
 })
 export class SecureModule { }
