@@ -2,15 +2,16 @@
   <div class="text-center">
     <img class="inline-block rounded" [src]="card.imageUrl">
   </div>
-  <div class="flex items-center mt-2">
-    <dd class="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5" style="flex-basis: 25em;">
+  <div class="flex mt-2" style="justify-content: space-between">
+    <dd class="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
       <img src="/assets/icons/avatar.png" class="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white dark:ring-slate-700 dark:group-hover:ring-white" loading="lazy">
       <img src="/assets/icons/avatar.png" class="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white dark:ring-slate-700 dark:group-hover:ring-white" loading="lazy">
       <img src="/assets/icons/avatar.png" class="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white dark:ring-slate-700 dark:group-hover:ring-white" loading="lazy">
-    </dd>
-      
-    <img class="w-6 h-6 mr-4" src="/assets/icons/heart.png">
-    <img class="w-6 h-6" src="/assets/icons/hamburger.png">
+    </dd>      
+    <div class="flex text-right">
+      <img class="w-6 h-6 mr-4" src="/assets/icons/heart.png">
+      <img class="w-6 h-6" src="/assets/icons/hamburger.png">
+    </div>
   </div>
   <div class="mt-2">
     <div class="py-2 font-bold text-slate-700 leading-snug">{{card.name}}</div>
